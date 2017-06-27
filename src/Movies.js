@@ -13,8 +13,6 @@ import MoviePoster from './MoviePoster';
 import MoviePopup from './MoviePopup';
 
 export default class Movies extends Component {
-    //static navigationOptions = { title: 'Movies', header: { visible: false } };
-
     static navigationOptions = {
         title: 'Movies',
         header: null
@@ -66,11 +64,8 @@ export default class Movies extends Component {
         // Close popup
         this.closeMovie();
         // Navigate away to Confirmation route
-        this.props.navigator.push({
-            name: 'confirmation',
-            // Generate random string
-            code: Math.random().toString(36).substring(6).toUpperCase(),
-        });
+        this.props.navigation.navigate('Confirmation', {code: Math.random().toString(36).substring(6).toUpperCase()})
+        
         }
     }
 
