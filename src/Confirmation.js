@@ -12,8 +12,7 @@ import { defaultStyles } from './styles';
 export default class Confirmation extends Component {
 
   static navigationOptions = {
-    title: 'Movies',
-    header: null
+    title: 'Confirmation',
   };
   
   render() {
